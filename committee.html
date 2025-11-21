@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8th Symposium on Biophysics Postgraduate Research in Hong Kong</title>
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <div w3-include-html="header.html"></div>
+
+  <!-- Banner -->
+  <div w3-include-html="banner.html"></div>
+
+  <!-- Navigation Menu -->
+  <div class="row">
+    <div w3-include-html="navigator.html"></div>
+
+    <!-- Main Content -->
+    <div id="content-block" class="medium-9 columns">
+      <h2>Organising Committee</h2>
+      <ul>
+        <li>Prof. Haibin Su (HKUST)</li>
+        <li>Prof. Xiakun Chu (HKUST GZ)</li>
+        <li>Mr. Zhong Shen (HKUST-FYTRI)</li>
+        <li>Prof. Yi Wang (CUHK)</li>
+        <li>Prof. Xiangze Zeng (HKBU)</li>
+        <li>Prof. Qianyuan Tang (HKBU)</li>
+        <li>Prof. Jun Fan (CityU)</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+<div w3-include-html="footer.html"></div>
+  
+<script>
+includeHTML();
+</script>
+</body>
+</html>
