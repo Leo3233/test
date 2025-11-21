@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8th Symposium on Biophysics Postgraduate Research in Hong Kong</title>
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <div w3-include-html="header.html"></div>
+
+  <!-- Banner -->
+  <div w3-include-html="banner.html"></div>
+
+  <!-- Navigation Menu -->
+  <div class="row">
+    <div w3-include-html="navigator.html"></div>
+
+    <!-- Main Content -->
+    <div id="content-block" class="medium-9 columns">
+      <h2>Welcome to the 8<sup>th</sup> Symposium</h2>
+      <p>
+        We are pleased to announce the 8<sup>th</sup> Symposium on Biophysics Postgraduate Research in Hong Kong, to be held on <strong>January 11, 2026</strong> at the <strong>HKUST campus</strong>.
+      </p>
+
+      <p>
+        This one-day symposium provides a dynamic platform for postgraduate students, faculty, and researchers working across biophysics, physics, chemistry, and biology to present their work and foster interdisciplinary collaborations.
+      </p>
+
+      <p>
+        The event will feature keynote lectures by internationally recognized scientists, invited talks from leading institutions, and a poster session with awards for the best student contributions.
+      </p>
+
+      <h3>Quick Details</h3>
+      <ul>
+        <li><strong>Date:</strong> January 11, 2026</li>
+        <li><strong>Venue:</strong> The Hong Kong University of Science and Technology (HKUST)</li>
+      </ul>
+
+      <p><strong>Contact Email:</strong> shihong.chen@connect.ust.hk</p>
+
+      <p><i>This event is supported by the Society of Interdisciplinary Research and hosted by HKUST.</i></p>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+<div w3-include-html="footer.html"></div>
+  
+<script>
+includeHTML();
+</script>
+</body>
+</html>
