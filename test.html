@@ -1,0 +1,129 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8th Symposium on Biophysics Postgraduate Research in Hong Kong</title>
+  <link rel="stylesheet" href="css/app.css">
+   <style>
+      table {
+          width: 800px; /* Set table width */
+          margin: auto; /* Center the table */
+          border-collapse: collapse; /* Ensure borders are collapsed (if needed) */
+          border: none; /* Remove table borders */
+      }
+      td {
+          text-align: center; /* Center the text */
+      }
+  </style>
+  <script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <div w3-include-html="header.html"></div>
+
+  <!-- Banner -->
+  <div w3-include-html="banner_small.html"></div>
+
+  <!-- Navigation Menu -->
+  <div class="row">
+    <div w3-include-html="navigator.html"></div>
+
+    <!-- Main Content -->
+    <div id="content-block" class="medium-9 columns">
+      <h2>Keynote Speakers</h2>
+      <!-- <table>
+        <tr>
+          <td><img src="img/KK.png" width="360 px" /><br/><span>Prof. Kunihiko Kaneko<br>University of Copenhagen</span></td>
+          <td><img src="img/JW.png" width="360 px" /><br/><span>Prof. Jin Wang<br>State University of New York</span></td>
+        </tr>
+      </table> -->
+      <ul>
+        <li>Prof. Kunihiko Kaneko (Niels Bohr Institute, University of Copenhagen)</li>
+        <li>Prof. Jin Wang (State University of New York)</li>
+      </ul>
+
+      <h2>Invited Speakers</h2>
+      <ul>
+          <li>Prof. Yanting Wang (ITP, CAS)</li>
+          <li>Prof. Wenfei Li (Nanjing U.)</li>
+          <li>Prof. Yi Wang (CUHK)</li>
+          <li>Prof. Xiangze Zeng (HKBU)</li>
+          <li>Prof. Qianyuan Tang (HKBU)</li>
+          <li>Prof. Jun Fan (CityU)</li>
+          <li>Prof. Xiakun Chu (HKUST GZ)</li>
+          <li>Prof. Feiran Li (Tsinghua)</li>
+          <li>Prof. Gang Chen (CUHK SZ)</li>
+          <li>Dr. Frank Pun (Insilico Medicine)</li>
+          <li>Dr. Lei Sun (GeneMind)</li>          
+          <li>Dr. Xiaorong Li (DP Tech)</li>
+          <li>Dr. Tan Li (QuiKTech)</li>
+          <li>Dr. Lin Huang (ScitiX)</li>
+      </ul>
+      <!-- <table>
+        <tr>
+          <td><img src="img/YTW.png" width="180 px" /><br/><span>Prof. Yanting Wang<br>ITP, CAS</span></td>
+          <td><img src="img/WFL.png" width="180 px" /><br/><span>Prof.  Wenfei Li<br>Nanjing U.</span></td>
+        </tr>
+      </table> -->
+      <!-- <h2>Participating Institutions & Industry</h2>
+      <ul>
+        <li>GeneMind (真迈生物)</li>
+        <li>BioMap</li>
+        <li>National Supercomputer Center in Guangzhou Nansha Sub-Center</li>
+        <li>To be confirmed: DP Technology, 曙光智算, 景派科技</li>
+      </ul> -->
+
+      <!-- <h2>Organising Committee</h2>
+      <ul>
+        <li>Prof. Haibin Su (HKUST)</li>
+        <li>Prof. Xiakun Chu (HKUST GZ)</li>
+        <li>Mr. Zhong Shen (HKUST-FYTRI)</li>
+        <li>Prof. Yi Wang (CUHK)</li>
+        <li>Prof. Xiangze Zeng (HKBU)</li>
+        <li>Prof. Qianyuan Tang (HKBU)</li>
+        <li>Prof. Jun Fan (CityU)</li>
+      </ul> -->
+
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+<div w3-include-html="footer.html"></div>
+  
+<script>
+includeHTML();
+</script>
+</body>
+</html>
