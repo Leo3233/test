@@ -2941,8 +2941,8 @@ table {
       padding: 0.5rem 0.625rem 0.625rem;
       font-weight: bold;
       text-align: left; }
-  tbody tr:nth-child(even) {
-    background-color: #f1f1f1; }
+  /* tbody tr:nth-child(even) {
+    background-color: #f1f1f1; } */
   tbody th,
   tbody td {
     padding: 0.5rem 0.625rem 0.625rem; }
@@ -3905,4 +3905,5 @@ div.sponsor{
   height: 45px;
   position: relative;
   left:40%;
+
 }
